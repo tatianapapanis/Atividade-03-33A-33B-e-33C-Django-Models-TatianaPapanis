@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.principal{
+  background-color: #e6a8c3;
+  display:flex;
+  width: 100%;
+}
+
+.parte1{
+  background-color: #e6e0e3;
+  height: 100%;
+  text-align: center;
+  justify-items: center;
+  width: 35%;
+  margin: 0%;
+  padding: 5px;
+}
+
+.parte2{
+  background-color: #ffc2dc;
+  margin: 0%;
+  padding: 20px;
+
+  width: 65%;
+}
+
+.parte1B{
+  display: block;
+}
+
+.foto{
+
+  border-radius: 20px;
+  align-items:left;
+  
+  
+}
+
+.alinhamento{
+  display: block;
+ text-align:center;
+ justify-items: center;
+ align-items: center;
+  
+  
+}
+#lista1{
+
+
+  text-align:left;
+}
+
+#lista2{
+  text-align:left;
+
+}
+
+#apresentacao{
+  font-size: 20px;
+}
+
+.idiomas {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de larguras iguais */
+  gap: 10px; /* Espaçamento entre as células da tabela */
+  margin-top: 20px;
+}
+
+.idiomas h2 {
+  grid-column: span 2; /* Ocupar duas colunas */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.idiomas table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.idiomas td {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}

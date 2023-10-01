@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  {% load static %}
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+
+
+  
+</head>
+
+<body>
+  <div class="principal">
+    <div class="parte1">
+      <div class="parte1A">
+        <br>
+        <img src="https://static.wixstatic.com/media/a80dc2_e6ab4670fdb64e15bf2a5f5633a18a55~mv2.jpg/v1/crop/x_250,y_0,w_1300,h_1300/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/spitz_foto_estudio.jpg" width = 100px alt="NF Album Cover"class="picRight"
+        <h2>Tatiana Fonseca Papanis Valente</h2>
+        
+        </div>
+      <br>
+      <div class="parte1B">
+        <h2>Contato</h2>
+        
+        <span c="alinhamento">
+        <img src="imagem/wa.png" width, height = 40, 40/>
+   55 (21) 97113-2533
+        </span>
+        <br>
+      
+      </div>
+      <div class="parte1C">
+        <h2>Redes Sociais</h2>
+        <span class="alinhamento">
+        <a href = "https://www.instagram.com/" target="blank">
+        <img src="imagem/intagram.png" width, height = 40, 40/>
+        <p>tpapanis</p>
+        </a>
+        <br>
+        <img src="{% static 'imagem/e-mail.png'\}" width, height = 40, 40/>
+          
+        <p>tatianapapanis@yahoo.com.br</p>
+      
+        </span>
+      </div>
+      <div class="parte1D">
+
+        <div class="idiomas">
+          <h2>Idiomas</h2>
+          <table>
+            <tr>
+              <th>Idioma</th>
+              <th>Nível</th>
+            </tr>
+            {% for idioma in idiomas %}
+            <tr>
+              <td>{{ idioma.nome }}</td>
+              <td>{{ idioma.escola }}</td>
+              <td>{{ idioma.classificacao }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+          
+       
+        
+        <!--
+        <div class="idiomas">
+            <h2>Idiomas</h2>
+    
+              <table>
+                <tr>
+                  <td>Português:</td>
+                  <td>Fluente</td>
+                </tr>
+                <tr>
+                  <td>Inglês:</td>
+                  <td>Intermediário</td>
+                </tr>
+                <tr>
+                  <td>Espanhol:</td>
+                  <td>Básico</td>
+                </tr>
+              </table>
+        </div> -->
+
+
+        <br>
+      </div>
+      <div class="parte1E">
+        <h2>Hobbies</h2>
+       <!-- <ol id=lista2>
+          <li>Viajar</li>
+          <li>Passear</li>
+          <li>Ir à praia</li>
+          <li>Assitir filmes</li>
+          <li>Escutar música</li>
+        
+        </ol>-->
+
+        <ol>
+
+          {% for hobbie in hobbies %}
+            <li>{{hobbie.tipo_hobbies}}</li>
+          {% endfor %}
+
+          
+        </ol>
+        
+      </div>  
+    </div>
+    
+    <div class="parte2">
+      <div class="parte2A">
+      <h1>Curriculum Vitae</h1>
+      <h2>Sobre Mim</h2>
+      <p id="apresentacao">Sou <u>Engenheira de produção </u>com foco em em<b> planejamento financeiro e inteligência de mercado </b>com experiência em <i> liderança de projeto na implementação da ferramenta orçamentária.</i></p>
+      <br>  
+      </div>
+      <div class="parte2B">
+        <h2>Experiência</h2>
+        <h3><ul><li>IRB Brasil Re - Consultora Financeira: 10 anos</li>
+      <li>Infoglobo - Analista de Planejamento Financeiro Pleno: 5 anos</li>
+      <li>Americanas.com - Trainee de Planejamento Comercial: 1 ano</li> </ul></h3>
+      <br> 
+      </div>
+      <div class="parte2C">
+      
+        <h2>Educação</h2>
+        <h3><ul><li>PUC - Cursando Engenharia da Computação</li>
+      <li>IBMEC - Mestrado em Economia com ênfase em Finanças</li>
+      <li>UFF - Formada em Engenharia da Produção</li> </ul></h3>
+      <br> 
+      
+      </div>
+      <div class="parte2D">
+        <h2>Habilidades</h2>
+        <!--
+          <h3><ul><li>capacidade analítica</li>
+        <li>foco em resultados</li>
+        <li>visão sistêmica</li> 
+        <li>raciocínio lógico</li> 
+        <li>negociação</li> 
+        <li>trabalho em equipe</li> 
+          
+        </ul></h3>-->
+
+
+         <ul>
+          {% for habilidade in habilidades %}
+            <li>{{habilidade.tipo_habilidade}}</li>
+          {% endfor %}</ul>
+
+
+
+        
+        <br> 
+  
+      
+      
+      </div>
+      
+  </div>
+
+  
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
